@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jahan Traders</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Alpine.js for Dropdowns, Mobile Menu & Slider Logic -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+    <body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-950 text-emerald-100 text-xs sm:text-sm py-2 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-phone text-emerald-400 mr-1"></i> +880 1711 523825</span>
+                <span><i class="fa-solid fa-envelope text-emerald-400 mr-1"></i> info@jahantraders.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-emerald-300 font-medium">Worldwide Export</span>
+                <!-- Social Icons in Top/Header area -->
+                <div class="flex items-center gap-2 ml-2">
+                    <a href="https://facebook.com" target="_blank" class="w-7 h-7 bg-emerald-900 hover:bg-emerald-700 rounded-full flex items-center justify-center transition text-white text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="w-7 h-7 bg-emerald-900 hover:bg-emerald-700 rounded-full flex items-center justify-center transition text-white text-xs"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://whatsapp.com" target="_blank" class="w-7 h-7 bg-emerald-900 hover:bg-emerald-700 rounded-full flex items-center justify-center transition text-white text-xs"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Navigation Bar -->
+    <header class="bg-emerald-900 text-white sticky top-0 z-50 shadow-lg" x-data="{ mobileMenuOpen: false, dropdownOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            
+            <!-- Custom Image Logo with Hover Effect -->
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="logo.png" alt="Jahan Traders Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-emerald-300 transition">Home</a>
+                <a href="about.html" class="hover:text-emerald-300 transition">About Us</a>
+                <a href="products.html" class="hover:text-emerald-300 transition">Products</a>
+                
+
+                <a href="contact.html" class="hover:text-emerald-300 transition">Contact</a>
+            </nav>
+        <!-- Action Button (Desktop) -->
+            <div class="hidden md:block">
+                <a href="contact.html" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-xl font-semibold transition shadow">
+                    Get Quote
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <div class="md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-white focus:outline-none p-2 rounded-lg bg-emerald-800 hover:bg-emerald-700 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Responsive Dropdown Menu -->
+        <div x-show="mobileMenuOpen" 
+             x-transition 
+             class="md:hidden bg-emerald-950 border-t border-emerald-800 px-6 py-6 space-y-4">
+            <a href="index.html" class="block text-white hover:text-emerald-300 font-medium py-1">Home</a>
+            <a href="about.html" class="block text-white hover:text-emerald-300 font-medium py-1">About Us</a>
+            <a href="products.html" class="block text-white hover:bg-emerald-300 font-medium p-1">Products</a>
+           
+
+            <a href="#contact" class="block text-white hover:text-emerald-300 font-medium py-1">Contact</a>
+            
+            <div class="pt-4">
+                <a href="contact.html" class="block text-center bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-semibold transition shadow">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </header>
+        <!-- About Us Hero / Page Content -->
+<section class="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
+    <!-- Page Title Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 transform transition-all duration-1000 ease-out opacity-0 translate-y-10 animate-on-scroll">
+        <span class="inline-block bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
+            About Jahan Traders
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-emerald-950 tracking-tight mb-6">
+            Your Trusted Partner in Premium Jute Export
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            Based in Bangladesh, the heart of the golden fiber, Jahan Traders is committed to delivering top-quality eco-friendly jute products worldwide. With years of expertise and rigorous quality control, we ensure sustainable solutions for global industries.
+        </p>
+    </div>
+
+    <!-- Details Grid -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        
+        <!-- Left Side: Image (বাম দিক থেকে আসবে + বর্ডার ও জুম ইফেক্ট) -->
+        <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-emerald-800/40 bg-white relative group transform transition-all duration-1000 ease-out opacity-0 translate-x-[-60px] animate-on-scroll">
+            <!-- হোভারে ওভারলে কালার পরিবর্তন -->
+            <div class="absolute inset-0 bg-emerald-950/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+            
+            <img src="https://plus.unsplash.com/premium_photo-1683120730432-b5ea74bd9047?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8b2ZmaWNlJTIwbWVldGluZ3xlbnwwfHwwfHx8MA%3D%3D" 
+                 alt="Jahan Traders Office" 
+                 class="w-full h-full object-cover aspect-[4/3] transition-transform duration-700 group-hover:scale-110">
+        </div>
+
+        <!-- Right Side: Text Content (ডান দিক থেকে আসবে) -->
+        <div class="space-y-6 transform transition-all duration-1000 ease-out opacity-0 translate-x-[60px] animate-on-scroll delay-200">
+            <h2 class="text-2xl sm:text-3xl font-bold text-emerald-950">Committed to Global Excellence & Sustainability</h2>
+            <p class="text-slate-600 leading-relaxed">
+                Our production capacity is about 1500 m ton per month. We are very much careful about our product quality and customer satisfaction and well-known for the timely shipments.
+
+If you have any inquiry / requerments about us and our products, please feel free to contact us.
+            </p>
+            <div class="grid grid-cols-2 gap-6 pt-4">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-md">
+                    <h3 class="text-3xl font-extrabold text-emerald-700 mb-1">10+</h3>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Years Experience</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-md">
+                    <h3 class="text-3xl font-extrabold text-emerald-700 mb-1">40+</h3>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Export Countries</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- Footer -->
+    <footer id="contact" class="bg-emerald-950 text-slate-400 py-12 px-6 text-center text-sm">
+       <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-left mb-8">
+    <div>
+        <!-- Footer Image Logo with Zoom Animation -->
+        <a href="#" class="inline-block overflow-hidden mb-4 group">
+            <img src="logo.png" alt="Jahan Traders Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-110">
+        </a>
+        <p class="text-slate-400 mb-4">Your trusted partner for premium quality eco-friendly jute products export from Bangladesh.</p>
+        <!-- Social Icons in Footer -->
+        <div class="flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" class="w-9 h-9 bg-emerald-900 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition shadow"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="w-9 h-9 bg-emerald-900 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition shadow"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://whatsapp.com" target="_blank" class="w-9 h-9 bg-emerald-900 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition shadow"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+    <div>
+        <h4 class="text-white font-bold text-lg mb-3">Quick Links</h4>
+        <ul class="space-y-2">
+            <li><a href="#" class="hover:text-emerald-300">Home</a></li>
+            <li><a href="#about" class="hover:text-emerald-300">About Us</a></li>
+            <li><a href="#products" class="hover:text-emerald-300">Products</a></li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="text-white font-bold text-lg mb-3">Contact Info</h4>
+        <p class="text-slate-400 mb-1">Dhaka, Bangladesh</p>
+        <p class="text-slate-400 mb-1">Phone: +880 1711 523825</p>
+        <p class="text-slate-400">Email: info@jahantraders.com</p>
+    </div>
+</div>
+        <div class="border-t border-emerald-900 pt-6">
+            <p>&copy; 2026 Jahan Traders. All Rights Reserved.</p>
+        </div>
+    </footer>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/+880 1711 523825" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-110 group animate-bounce">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+        Chat with us
+    </span>
+</a>
+<!-- Scroll to Top Button (Yellow Theme) -->
+<div x-data="{ scrollToTop: false }" @scroll.window="scrollToTop = (window.pageYOffset > 300)">
+    <button @click="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            x-show="scrollToTop"
+            x-transition.opacity
+            class="fixed bottom-24 right-6 z-50 w-12 h-12 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-full flex items-center justify-center text-xl shadow-[0_10px_25px_rgba(245,158,11,0.4)] transition-all duration-300 hover:scale-110 focus:outline-none font-bold">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
+<!-- Cursor HTML Elements -->
+<div class="custom-cursor" id="customCursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

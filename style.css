@@ -1,0 +1,41 @@
+/* Custom Cursor Hide */
+    body, a, button, input, textarea {
+        cursor: none !important;
+    }
+    /* Custom Outer Ring Cursor */
+    .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        border: 2px solid #eed708;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+        z-index: 99999;
+        box-shadow: 0 0 25px rgba(240, 204, 3, 0.911);
+    }
+
+    /* Inner Dot */
+    .cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background-color: #10b981;
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 100000;
+    }
+
+    /* Hover effect */
+    body.hovered .custom-cursor {
+        width: 55px;
+        height: 55px;
+        background-color: rgba(235, 235, 7, 0.918);
+        border-color: #05f539;
+    }
