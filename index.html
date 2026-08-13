@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jahan Traders - Premium Jute Exporter</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Alpine.js for Dropdowns, Mobile Menu & Slider Logic -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-950 text-emerald-100 text-xs sm:text-sm py-2 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-phone text-emerald-400 mr-1"></i> +880 1711 523825</span>
+                <span><i class="fa-solid fa-envelope text-emerald-400 mr-1"></i> info@jahantraders.com</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-emerald-300 font-medium">Worldwide Export</span>
+                <!-- Social Icons in Top/Header area -->
+                <div class="flex items-center gap-2 ml-2">
+                    <a href="https://facebook.com" target="_blank" class="w-7 h-7 bg-emerald-900 hover:bg-emerald-700 rounded-full flex items-center justify-center transition text-white text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="w-7 h-7 bg-emerald-900 hover:bg-emerald-700 rounded-full flex items-center justify-center transition text-white text-xs"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://whatsapp.com" target="_blank" class="w-7 h-7 bg-emerald-900 hover:bg-emerald-700 rounded-full flex items-center justify-center transition text-white text-xs"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="bg-emerald-900 text-white sticky top-0 z-50 shadow-lg" x-data="{ mobileMenuOpen: false, dropdownOpen: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            
+            <!-- Custom Image Logo with Hover Effect -->
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="logo.png" alt="Jahan Traders Logo" class="h-12 sm:h-15 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <a href="index.html" class="hover:text-amber-300 transition">Home</a>
+                <a href="about.html" class="hover:text-amber-300 transition">About Us</a>
+                 <a href="gallery.html" class="hover:text-amber-300 transition">Gallery</a>
+                 <a href="export.html" class="hover:text-amber-300 transition">Export</a>
+                <!-- Dropdown Menu for Products -->
+                <div class="relative" @mouseleave="dropdownOpen = false">
+    <button @mouseover="dropdownOpen = true" @click="dropdownOpen = !dropdownOpen" class="flex items-center gap-1 hover:text-amber-300 transition focus:outline-none cursor-pointer">
+        Products 
+        <svg class="w-4 h-4 transition-transform duration-300" :class="dropdownOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    
+    <!-- Dropdown Box -->
+    <div x-show="dropdownOpen" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 translate-y-2"
+         class="absolute left-0 mt-3 w-72 bg-emerald-950/95 backdrop-blur-md border border-emerald-800/80 rounded-2xl shadow-2xl p-2 z-50 text-white"
+         style="display: none;">
+         
+        <a href="products.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-emerald-900/60 transition group">
+            <div class="w-9 h-9 rounded-lg bg-emerald-900 text-emerald-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                <i class="fa-solid fa-bag-shopping text-sm"></i>
+            </div>
+            <div>
+                <span class="block text-sm font-bold text-white group-hover:text-amber-300 transition">Jute Sacks & Bags</span>
+                <span class="block text-xs text-amber-400/70">Heavy-duty packing solutions</span>
+            </div>
+        </a>
+
+        <a href="products.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-emerald-900/60 transition group">
+            <div class="w-9 h-9 rounded-lg bg-emerald-900 text-emerald-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                <i class="fa-solid fa-rope text-sm"></i>
+            </div>
+            <div>
+                <span class="block text-sm font-bold text-white group-hover:text-amber-300 transition">Jute Yarn & Twine</span>
+                <span class="block text-xs text-amber-400/70">High tensile spun yarn</span>
+            </div>
+        </a>
+
+        <a href="products.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-emerald-900/60 transition group">
+            <div class="w-9 h-9 rounded-lg bg-emerald-900 text-emerald-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                <i class="fa-solid fa-earth-americas text-sm"></i>
+            </div>
+            <div>
+                <span class="block text-sm font-bold text-white group-hover:text-amber-300 transition">Jute Geotextiles</span>
+                <span class="block text-xs text-amber-400/70">Eco-friendly soil control</span>
+            </div>
+        </a>
+
+        <a href="products.html" class="flex items-start gap-3 p-3 rounded-xl hover:bg-emerald-900/60 transition group">
+            <div class="w-9 h-9 rounded-lg bg-emerald-900 text-emerald-300 flex items-center justify-center shrink-0 group-hover:scale-110 transition">
+                <i class="fa-solid fa-gift text-sm"></i>
+            </div>
+            <div>
+                <span class="block text-sm font-bold text-white group-hover:text-amber-300 transition">Customized Jute Handicrafts</span>
+                <span class="block text-xs text-amber-400/70">Artistic home decor items</span>
+            </div>
+        </a>
+    </div>
+</div>
+<a href="contact.html" class="hover:text-amber-300 transition">Contact</a>
+            </nav>
+
+            <!-- Action Button (Desktop) -->
+            <div class="hidden md:block">
+                <a href="contact.html" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-xl font-semibold transition shadow">
+                    Get Quote
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <div class="md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-white focus:outline-none p-2 rounded-lg bg-emerald-800 hover:bg-emerald-700 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Responsive Dropdown Menu -->
+        <div x-show="mobileMenuOpen" 
+     x-transition 
+     class="md:hidden bg-emerald-950 border-t border-emerald-800 px-6 py-6 space-y-4">
+    <a href="index.html" class="block text-white hover:text-amber-300 font-medium py-1">Home</a>
+    <a href="about.html" class="block text-white hover:text-amber-300 font-medium py-1">About Us</a>
+    
+    <!-- Gallery Link (Fixed styling) -->
+    <a href="gallery.html" class="block text-white hover:text-amber-300 font-medium py-1">Gallery</a>
+    
+    <!-- Export Link (Fixed styling) -->
+    <a href="export.html" class="block text-white hover:text-amber-300 font-medium py-1">Export</a>
+
+    <!-- Mobile Products Accordion Dropdown -->
+    <div x-data="{ subMenu: false }">
+        <button @click="subMenu = !subMenu" class="flex justify-between items-center w-full text-white hover:text-amber-300 font-medium py-1">
+            <span>Products</span>
+            <svg class="w-4 h-4 transition-transform duration-300" :class="subMenu ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        
+        <!-- Dropdown Sub-menu -->
+        <div x-show="subMenu" x-transition class="pl-4 mt-2 space-y-2 border-l-2 border-emerald-700">
+            <a href="products.html" class="block text-sm text-amber-200 hover:text-white py-1">Jute Sacks & Bags</a>
+            <a href="products.html" class="block text-sm text-amber-200 hover:text-white py-1">Jute Yarn & Twine</a>
+            <a href="products.html" class="block text-sm text-amber-200 hover:text-white py-1">Jute Geotextiles</a>
+            <a href="products.html" class="block text-sm text-amber-200 hover:text-white py-1">Customized Handicrafts</a>
+        </div>
+    </div>
+
+    <a href="contact.html" class="block text-white hover:text-amber-300 font-medium py-1">Contact</a>
+    
+    <div class="pt-4">
+        <a href="contact.html" class="block text-center bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-xl font-semibold transition shadow">
+            Get Quote
+        </a>
+    </div>
+</div>
+    </header>
+
+    <!-- Hero Section with Auto Image Slider (Clear & Bright Look) -->
+    <section class="relative bg-slate-900 text-white pt-20 pb-32 lg:pb-36 px-6 overflow-hidden" 
+             x-data="{ 
+                activeSlide: 0, 
+                images: [
+                    'https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&q=80&w=1500',
+                    'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1500',
+                    'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1500'
+                ],
+                init() {
+                    setInterval(() => {
+                        this.activeSlide = (this.activeSlide + 1) % this.images.length;
+                    }, 4000); 
+                }
+             }">
+        
+        <!-- Background Slider Images with clearer opacity -->
+        <template x-for="(img, index) in images" :key="index">
+            <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-50"
+                 :style="`background-image: url('${img}');`"
+                 x-show="activeSlide === index"
+                 x-transition.opacity.duration.1000ms></div>
+        </template>
+
+        <!-- Lighter Gradient Overlay so images and text stay sharp -->
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/40 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 space-y-6">
+            
+            <!-- Top Badge -->
+            <div class="inline-flex items-center gap-2 bg-emerald-900/90 border border-emerald-600 text-emerald-200 text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full backdrop-blur-sm shadow-md">
+                <i class="fa-solid fa-award text-emerald-400"></i> Leading Jute Manufacturer & Exporter
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white drop-shadow-md">
+                Jahan <span class="text-emerald-400">Traders</span>
+            </h1>
+
+            <!-- Paragraph -->
+            <p class="max-w-2xl text-slate-100 text-base sm:text-lg leading-relaxed drop-shadow">
+                Jahan Traders is a trusted Bangladeshi manufacturer and exporter of premium quality jute products. We supply eco-friendly products worldwide with international quality standards.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="products.html" class="relative overflow-hidden group bg-emerald-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 shadow-lg inline-flex">
+    <!-- Left to Right filling background (Yellow) -->
+    <span class="absolute inset-y-0 left-0 w-0 bg-amber-300 transition-all duration-300 ease-in-out group-hover:w-full z-0"></span>
+    
+    <!-- Button Text & Icon with smooth hover color change -->
+    <span class="relative z-10 flex items-center gap-2 font-semibold text-white group-hover:text-slate-950 transition-colors duration-300">
+        Explore Products <i class="fa-solid fa-arrow-right text-xs"></i>
+    </span>
+</a>
+                <a href="contact.html" class="relative overflow-hidden group bg-slate-900/40 text-white border-2 border-white/80 font-medium px-6 py-3 rounded-lg transition-all duration-300 backdrop-blur-sm shadow-md inline-block text-center">
+    <!-- Yellow filling background from top to bottom -->
+    <span class="absolute inset-x-0 top-0 h-0 bg-amber-300 transition-all duration-300 ease-in-out group-hover:h-full z-0"></span>
+    
+    <span class="relative z-10 group-hover:text-slate-950 font-bold transition-colors duration-200">
+        Contact Us
+    </span>
+</a>
+            </div>
+
+            <!-- Slider Indicator Dots -->
+            <div class="flex gap-2 pt-4">
+                <template x-for="(img, index) in images" :key="index">
+                    <button @click="activeSlide = index" 
+                            class="w-3 h-3 rounded-full transition-all shadow"
+                            :class="activeSlide === index ? 'bg-emerald-400 w-6' : 'bg-white/60'"></button>
+                </template>
+            </div>
+
+        </div>
+    </section>
+    <!-- Large Separate Feature Cards Section -->
+    <div class="max-w-7xl mx-auto px-6 -mt-24 sm:-mt-28 relative z-30 mb-20">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Card 1 -->
+            <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 flex items-center gap-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] group cursor-pointer">
+                <div class="w-18 h-18 sm:w-20 sm:h-20 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-lg sm:text-xl group-hover:text-emerald-800 transition">Premium Quality</h4>
+                    <p class="text-sm text-slate-500 mt-1">Eco-friendly jute goods.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 flex items-center gap-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] group cursor-pointer">
+                <div class="w-18 h-18 sm:w-20 sm:h-20 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-lg sm:text-xl group-hover:text-emerald-800 transition">Global Export</h4>
+                    <p class="text-sm text-slate-500 mt-1">40+ Countries</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 flex items-center gap-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] group cursor-pointer">
+                <div class="w-18 h-18 sm:w-20 sm:h-20 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-lg sm:text-xl group-hover:text-emerald-800 transition">Quality Control</h4>
+                    <p class="text-sm text-slate-500 mt-1">Strict Quality Control</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white text-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 flex items-center gap-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_25px_60px_rgba(0,0,0,0.15)] group cursor-pointer">
+                <div class="w-18 h-18 sm:w-20 sm:h-20 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-lg sm:text-xl group-hover:text-emerald-800 transition">Fast Delivery</h4>
+                    <p class="text-sm text-slate-500 mt-1">Reliable Worldwide</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   <!-- About Us Section -->
+<section id="about" class="py-16 px-6 max-w-7xl mx-auto overflow-hidden bg-slate-50">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left Side: Text Content (বাম দিক থেকে স্লাইড হয়ে আসবে) -->
+        <!-- আমরা একটি অদৃশ্য র‍্যাপার (opacity-0 translate-x- -10) ব্যবহার করছি যা লোড হওয়ার সাথে সাথে দেখা যাবে (duration-1000 delay-300) -->
+        <div class="space-y-6 transform transition-all duration-1000 ease-out opacity-0 translate-x-[-50px] animate-on-scroll">
+            <span class="inline-block bg-emerald-100 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+               Greetings from JAHAN TRADERS.
+            </span>
+            <h2 class="text-1xl sm:text-1xl md:text-2xl font-extrabold text-emerald-950 leading-tight tracking-tight">
+              M/S JAHAN TRADES is a leading Bangladeshi jute exporter and manufacturer established in 1974. With over 3 decades of experience, we have earned a reputation as a trusted global provider, exporting all kinds of quality jute and jute products worldwide.
+            </h2>
+            <p class="text-slate-600 text-base md:text-lg leading-relaxed">
+               We are exporting all kinds Jute Products as like as, FOOD GRADE JUTE BAG (VOT), HESSIAN CLOTH, HESSIAN BAGS, JUTE YARN / TWINE, JUTE ROPE, JUTE SOIL SAVER, RAW JUTE , JUTE TAPE & JUTE WEBBING etc with good reputations. We have our own spinning & composite factors named as Shamsher Jute Mills Ltd and Madina Jute Industries ltd, located at Norshingdi, about 50 km from our office / Dhaka.
+            </p>
+            <div class="grid grid-cols-2 gap-6 pt-4">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-lg">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-1">10+</h3>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Years Experience</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-lg">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-1">40+</h3>
+                    <p class="text-xs text-slate-500 uppercase tracking-wider font-bold">Export Countries</p>
+                </div>
+            </div>
+        </div>
+
+      
+        <!-- এটিও লোড হওয়ার সাথে সাথে ডান দিক থেকে আসবে (duration-1000 delay-500 একটু পরে শুরু হবে) -->
+        <div class="relative group transform transition-all duration-1000 ease-out opacity-0 translate-x-[50px] animate-on-scroll delay-300">
+            <!-- প্রিমিয়াম বক্স শ্যাডো এবং বর্ডার -->
+            <div class="relative overflow-hidden rounded-[2.5rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] aspect-[4/3] border-4 border-white">
+                
+                <!-- ইমেজের ওপর একটি হালকা ওভারলে (Hover এ সরে যাবে) -->
+                <div class="absolute inset-0 bg-emerald-950/10 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                
+                <!-- Image (Hover এ জুম হবে) -->
+                <img src="about.jpeg" 
+                     alt="Jute Warehouse and Bales" 
+                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            
+            <!-- ডেকোরেটিভ এলিমেন্ট (ইমেজের পেছনে একটি ফ্লোটিং সার্কেল) -->
+            <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-amber-400 rounded-full opacity-20 -z-10 blur-2xl"></div>
+        </div>
+
+    </div>
+</section>
+
+
+  <!-- Why Choose Us / Trusted Jute Export Partner Section -->
+<section id="why-choose-us" class="py-16 px-6 max-w-7xl mx-auto my-6 bg-white rounded-[2.5rem] shadow-sm border border-slate-100 relative overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Side: Featured Image Box (Slides from Left) -->
+        <div class="lg:col-span-5 relative slide-from-left">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                <img src="https://images.unsplash.com/photo-1567708415513-6ba3822eaec1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SnV0ZSUyMGJhZ3MlMjBsb2FkZWQlMjBvbiUyMHRydWNrfGVufDB8fDB8fHww" alt="Jute Products" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-emerald-100 rounded-full blur-2xl -z-10"></div>
+        </div>
+
+        <!-- Right Side: Content & Features Grid (Slides from Right) -->
+        <div class="lg:col-span-7 slide-from-right">
+            <div class="mb-8">
+                <span class="inline-block bg-emerald-100/80 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
+                    Why Choose Us
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight mb-4">
+                    Trusted Jute Export Partner
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                    Delivering premium-quality jute products with reliable export services, competitive pricing, and international standards.
+                </p>
+            </div>
+
+            <!-- Features Mini Grid (2x2) - ডান পাশের ৪টি কার্ড -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                
+                <!-- Card 1: Premium Quality -->
+                <div class="bg-slate-50/70 p-6 rounded-2xl border border-slate-100 hover:bg-emerald-50/50 hover:border-emerald-200 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-sm">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-emerald-950 mb-1">Premium Quality</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Top-grade natural fibers carefully processed for global clients.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Global Export -->
+                <div class="bg-slate-50/70 p-6 rounded-2xl border border-slate-100 hover:bg-emerald-50/50 hover:border-emerald-200 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-sm">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-emerald-950 mb-1">Global Export</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Seamless worldwide delivery network across 40+ countries.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Eco Friendly -->
+                <div class="bg-slate-50/70 p-6 rounded-2xl border border-slate-100 hover:bg-emerald-50/50 hover:border-emerald-200 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-sm">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-emerald-950 mb-1">100% Eco-Friendly</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Sustainable materials that protect our environment.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Support & Reliability -->
+                <div class="bg-slate-50/70 p-6 rounded-2xl border border-slate-100 hover:bg-emerald-50/50 hover:border-emerald-200 transition-all duration-300 flex items-start gap-4">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl shrink-0 shadow-sm">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-emerald-950 mb-1">Dedicated Support</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">24/7 client assistance and hassle-free communication.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+  <!-- Products Section with 6 Cards, Scroll Animation & Enquire Modal Trigger -->
+<section id="products" class="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
+    <!-- Section Title (অ্যানিমেটেড) -->
+    <div class="text-center mb-14 transform transition-all duration-1000 ease-out opacity-0 translate-y-10 animate-on-scroll">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 mb-3">Our Premium Jute Collection</h2>
+        <p class="text-slate-600 text-base max-w-xl mx-auto">Discover our comprehensive range of sustainable, durable, and eco-friendly industrial solutions designed for global standards.</p>
+    </div>
+
+    <!-- 6 Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col transform transition-all duration-1000 ease-out opacity-0 translate-y-12 animate-on-scroll">
+            <div class="relative overflow-hidden h-60 bg-emerald-50">
+                <img src="https://media.istockphoto.com/id/1058396278/photo/empty-burlap-bag-or-sack.webp?a=1&b=1&s=612x612&w=0&k=20&c=laLz7xueuSTaNAWGEfhXaQvJoOuvAozYKBX-eCQu8U4=" alt="Jute Sacks & Bags" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 product-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-4 left-4 bg-emerald-800 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Best Seller</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors product-title">Jute Sacks & Bags</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Durable, heavy-duty, and eco-friendly packaging solutions tailored precisely for agricultural and industrial needs.</p>
+                <button onclick="openEnquireModal(this)" class="inline-flex items-center gap-2 text-emerald-700 font-semibold text-sm group-hover:text-emerald-900 transition text-left cursor-pointer">
+                    Enquire Now <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col transform transition-all duration-1000 ease-out opacity-0 translate-y-12 animate-on-scroll delay-150">
+            <div class="relative overflow-hidden h-60 bg-emerald-50">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600" alt="Jute Yarn & Twine" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 product-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-4 left-4 bg-emerald-800 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">High Strength</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors product-title">Jute Yarn & Twine</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Fine quality spun yarn and twine known for high tensile strength, perfect for diverse weaving and industrial packaging.</p>
+                <button onclick="openEnquireModal(this)" class="inline-flex items-center gap-2 text-emerald-700 font-semibold text-sm group-hover:text-emerald-900 transition text-left cursor-pointer">
+                    Enquire Now <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col transform transition-all duration-1000 ease-out opacity-0 translate-y-12 animate-on-scroll delay-300">
+            <div class="relative overflow-hidden h-60 bg-emerald-50">
+                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=600" alt="Jute Geotextiles" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 product-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-4 left-4 bg-emerald-800 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Eco Friendly</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors product-title">Jute Geotextiles</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Eco-friendly woven fabrics ideal for soil erosion control, riverbank protection, and extensive agricultural applications.</p>
+                <button onclick="openEnquireModal(this)" class="inline-flex items-center gap-2 text-emerald-700 font-semibold text-sm group-hover:text-emerald-900 transition text-left cursor-pointer">
+                    Enquire Now <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col transform transition-all duration-1000 ease-out opacity-0 translate-y-12 animate-on-scroll">
+            <div class="relative overflow-hidden h-60 bg-emerald-50">
+                <img src="https://images.unsplash.com/photo-1541191662729-433a58fb02f2?w=500&auto=format&fit=crop&q=60" alt="Jute Hessian Cloth" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 product-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-4 left-4 bg-emerald-800 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Premium Weave</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors product-title">Jute Hessian Cloth</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Lightweight and flexible hessian fabrics widely used for wrapping, decoration, and general utility purposes.</p>
+                <button onclick="openEnquireModal(this)" class="inline-flex items-center gap-2 text-emerald-700 font-semibold text-sm group-hover:text-emerald-900 transition text-left cursor-pointer">
+                    Enquire Now <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col transform transition-all duration-1000 ease-out opacity-0 translate-y-12 animate-on-scroll delay-150">
+            <div class="relative overflow-hidden h-60 bg-emerald-50">
+                <img src="https://images.unsplash.com/photo-1612676777268-24594d85b631?w=500&auto=format&fit=crop&q=60" alt="Jute Handicrafts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 product-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-4 left-4 bg-emerald-800 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Handcrafted</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors product-title">Jute Handicrafts</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Artistic and stylish home decor items, mats, and trendy shopping bags crafted by skilled local artisans.</p>
+                <button onclick="openEnquireModal(this)" class="inline-flex items-center gap-2 text-emerald-700 font-semibold text-sm group-hover:text-emerald-900 transition text-left cursor-pointer">
+                    Enquire Now <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group flex flex-col transform transition-all duration-1000 ease-out opacity-0 translate-y-12 animate-on-scroll delay-300">
+            <div class="relative overflow-hidden h-60 bg-emerald-50">
+                <img src="https://media.istockphoto.com/id/1319705760/photo/truck-loaded-with-bags-containing-peanuts-for-transportation-india.webp?a=1&b=1&s=612x612&w=0&k=20&c=tdl7ONGe8hZAYQ5ODYTgjoXyhwf9WZBJnupcTw2LNsQ=" alt="Custom Jute Rolls" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 product-img">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="absolute top-4 left-4 bg-emerald-800 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">Customized</span>
+            </div>
+            <div class="p-8 flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-emerald-950 mb-3 group-hover:text-emerald-700 transition-colors product-title">Custom Jute Rolls</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">Custom-sized industrial jute rolls manufactured according to buyer specifications for international export standards.</p>
+                <button onclick="openEnquireModal(this)" class="inline-flex items-center gap-2 text-emerald-700 font-semibold text-sm group-hover:text-emerald-900 transition text-left cursor-pointer">
+                    Enquire Now <i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Image/Enquiry Popup Modal (বাটনে ক্লিক করলে ইমেজ দেখানোর জন্য) -->
+<div id="enquireModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 relative" id="modalContainer">
+        <!-- Close Button -->
+        <button onclick="closeEnquireModal()" class="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Modal Content: Product Image & Name -->
+        <div class="relative h-72 bg-emerald-50">
+            <img id="modalImg" src="" alt="Product Preview" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6 text-center">
+            <h3 id="modalTitle" class="text-2xl font-bold text-emerald-950 mb-2">Product Name</h3>
+            <p class="text-slate-600 text-sm mb-6">Interested in this product? Send us an enquiry directly or connect with our sales team.</p>
+            <a href="#contact" onclick="closeEnquireModal()" class="inline-block bg-emerald-800 hover:bg-emerald-900 text-white font-semibold px-8 py-3 rounded-xl transition shadow-lg">
+                Proceed to Contact Form
+            </a>
+        </div>
+    </div>
+</div>
+
+    <!-- Global Export Markets Section -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="bg-emerald-950 text-white rounded-3xl p-8 sm:p-14 text-center shadow-xl relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            
+            <div class="relative z-10 max-w-3xl mx-auto">
+                <span class="bg-emerald-900 text-emerald-300 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">Global Reach</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-3 mb-4">Exporting to Over 40+ Countries Worldwide</h2>
+                <p class="text-emerald-100 text-base leading-relaxed mb-8">
+                    Our high-grade jute sacks, yarn, and geotextiles are trusted and regularly exported to major markets across Europe, North America, Asia, and the Middle East.
+                </p>
+               <div class="flex flex-wrap justify-center gap-4">
+    <span class="bg-emerald-900/80 border border-emerald-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] transition-all duration-300 hover:-translate-y-1.5 hover:scale-105 cursor-pointer">
+        🇪🇺 Europe
+    </span>
+    <span class="bg-emerald-900/80 border border-emerald-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] transition-all duration-300 hover:-translate-y-1.5 hover:scale-105 cursor-pointer">
+        🇺🇸 North America
+    </span>
+    <span class="bg-emerald-900/80 border border-emerald-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] transition-all duration-300 hover:-translate-y-1.5 hover:scale-105 cursor-pointer">
+        🇦🇪 Middle East
+    </span>
+    <span class="bg-emerald-900/80 border border-emerald-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(16,185,129,0.3)] transition-all duration-300 hover:-translate-y-1.5 hover:scale-105 cursor-pointer">
+        🌏 Asia Pacific
+    </span>
+</div>
+            </div>
+        </div>
+    </section>
+   <!-- Testimonials Section -->
+<section class="py-20 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="inline-block bg-emerald-100/80 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
+                Client Testimonials
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight">
+                Trusted by Global Partners
+            </h2>
+        </div>
+
+        <!-- Cards Grid (Mobile 1 column, Desktop 3 columns) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Testimonial Card 1 -->
+            <div class="bg-white p-8 sm:p-10 rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_50px_rgba(16,185,129,0.12)] transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col justify-between group">
+                <div>
+                    <div class="text-emerald-500 text-2xl mb-4">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 italic">
+                        "Jahan Traders provides the best quality jute sacks. Their reliability, strict compliance, and on-time international delivery are unmatched."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center font-bold text-base shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                        JD
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald-950 text-base">John Doe</h4>
+                        <p class="text-xs sm:text-sm text-slate-500">Managing Director, UK</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 2 -->
+            <div class="bg-white p-8 sm:p-10 rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_50px_rgba(16,185,129,0.12)] transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col justify-between group">
+                <div>
+                    <div class="text-emerald-500 text-2xl mb-4">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 italic">
+                        "Exceptional eco-friendly products and professional communication. They handled our bulk order for jute yarn seamlessly."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center font-bold text-base shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                        MS
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald-950 text-base">Michael Schmidt</h4>
+                        <p class="text-xs sm:text-sm text-slate-500">Procurement Head, Germany</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial Card 3 -->
+            <div class="bg-white p-8 sm:p-10 rounded-[2rem] shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0_30px_50px_rgba(16,185,129,0.12)] transition-all duration-500 hover:-translate-y-2 border border-slate-100 flex flex-col justify-between group">
+                <div>
+                    <div class="text-emerald-500 text-2xl mb-4">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 italic">
+                        "Their custom jute rolls and geotextiles exceeded our industrial quality standards. Highly recommended supplier from Bangladesh."
+                    </p>
+                </div>
+                <div class="flex items-center gap-4 pt-4 border-t border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center font-bold text-base shadow-inner group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                        AR
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-emerald-950 text-base">Ahmed Al-Rashid</h4>
+                        <p class="text-xs sm:text-sm text-slate-500">Supply Chain Manager, UAE</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 px-6 max-w-4xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+        <span class="inline-block bg-emerald-100/80 text-emerald-800 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
+            Got Questions?
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight">
+            Frequently Asked Questions
+        </h2>
+    </div>
+
+    <!-- FAQ Cards Container -->
+    <div class="space-y-5">
+        
+        <!-- FAQ Item 1 -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_50px_rgba(16,185,129,0.08)] transition-all duration-300 hover:-translate-y-1 group">
+            <h3 class="font-bold text-emerald-950 text-lg sm:text-xl mb-3 flex items-center justify-between group-hover:text-emerald-700 transition-colors">
+                <span>What is the Minimum Order Quantity (MOQ)?</span>
+                <span class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                We maintain a flexible MOQ based on the specific product type. Typically, international bulk orders start from a standard 20ft container.
+            </p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_50px_rgba(16,185,129,0.08)] transition-all duration-300 hover:-translate-y-1 group">
+            <h3 class="font-bold text-emerald-950 text-lg sm:text-xl mb-3 flex items-center justify-between group-hover:text-emerald-700 transition-colors">
+                <span>What payment methods do you accept?</span>
+                <span class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                We accept secure international payment terms including Irrevocable Letter of Credit (L/C) and Telegraphic Transfer (T/T) for smooth transactions.
+            </p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-100 shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_30px_50px_rgba(16,185,129,0.08)] transition-all duration-300 hover:-translate-y-1 group">
+            <h3 class="font-bold text-emerald-950 text-lg sm:text-xl mb-3 flex items-center justify-between group-hover:text-emerald-700 transition-colors">
+                <span>Do you provide customized packaging and branding?</span>
+                <span class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+                    <i class="fa-solid fa-plus"></i>
+                </span>
+            </h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Yes! We offer OEM and custom export packaging options according to your private label requirements and international shipping standards.
+            </p>
+        </div>
+
+    </div>
+</section>
+    <!-- Inquiry Form & Map Section -->
+<section id="contact" class="py-20 px-6 max-w-7xl mx-auto overflow-hidden">
+    <div class="bg-white rounded-[2.5rem] p-8 md:p-14 shadow-[0_30px_70px_rgba(0,0,0,0.08)] hover:shadow-[0_40px_90px_rgba(16,185,129,0.15)] border border-slate-100 transition-all duration-500 grid md:grid-cols-2 gap-12 items-center">
+        
+        <!-- Left Side: Inquiry Form with Clear Background Image (বাম দিক থেকে স্লাইড হয়ে আসবে) -->
+        <div class="relative rounded-[2rem] p-8 md:p-10 overflow-hidden shadow-2xl border border-slate-200 bg-cover bg-center bg-no-repeat transform transition-all duration-1000 ease-out opacity-0 translate-x-[-60px] animate-on-scroll" style="background-image: linear-gradient(to bottom, rgba(11, 20, 38, 0.85), rgba(11, 20, 38, 0.85)), url('https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=1200&auto=format&fit=crop');">
+            <div class="relative z-10">
+                <span class="inline-block bg-emerald-100/90 text-emerald-900 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-4">
+                    Get in Touch
+                </span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+                    Send Us Your Inquiry
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
+                    Ready to discuss your requirements? Our team is here to provide competitive quotes and sustainable jute solutions.
+                </p>
+
+                <form class="space-y-4">
+                    <div>
+                        <input type="text" placeholder="Your Name" class="w-full p-4 rounded-2xl bg-white/90 border border-slate-300 text-slate-900 placeholder:text-slate-500 focus:bg-white focus:ring-2 focus:ring-emerald-400 outline-none transition-all duration-300 shadow-sm">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Your Email" class="w-full p-4 rounded-2xl bg-white/90 border border-slate-300 text-slate-900 placeholder:text-slate-500 focus:bg-white focus:ring-2 focus:ring-emerald-400 outline-none transition-all duration-300 shadow-sm">
+                    </div>
+                    <div>
+                        <textarea placeholder="Your Message / Product Needs" rows="4" class="w-full p-4 rounded-2xl bg-white/90 border border-slate-300 text-slate-900 placeholder:text-slate-500 focus:bg-white focus:ring-2 focus:ring-emerald-400 outline-none transition-all duration-300 shadow-sm resize-none"></textarea>
+                    </div>
+                    <button type="submit" class="relative overflow-hidden group w-full bg-emerald-500 text-slate-950 py-4 rounded-2xl font-bold text-base shadow-lg hover:bg-emerald-400 transition-all duration-300 transform hover:scale-[1.02] cursor-pointer">
+                         <span class="absolute inset-x-0 top-0 h-0 bg-amber-400 transition-all duration-300 ease-in-out group-hover:h-full z-0"></span>
+                         <span class="relative z-10 text-slate-950 font-bold transition-colors duration-300">
+                             Send Inquiry <i class="fa-solid fa-paper-plane ml-2"></i>
+                         </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Side: Google Map & Location Details (ডান দিক থেকে স্লাইড হয়ে আসবে) -->
+        <div class="space-y-4 transform transition-all duration-1000 ease-out opacity-0 translate-x-[60px] animate-on-scroll delay-200">
+            <div class="rounded-3xl overflow-hidden shadow-[0_20px_45px_rgba(0,0,0,0.1)] border border-slate-200 h-[380px] md:h-[450px] relative group">
+                <!-- Google Map Embedded (Dhaka Location) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.889311654394!2d90.3912534!3d23.7509797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd566cef75%3A0xcfe34440aa1192eb!2sDhaka!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700">
+                </iframe>
+            </div>
+            
+            <!-- Quick Info Badge under Map -->
+            <div class="flex items-center gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-emerald-900 text-emerald-300 flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-emerald-950 text-sm">Corporate Office</h4>
+                    <p class="text-xs text-slate-500">Dhaka, Bangladesh</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+   <!-- Footer -->
+<footer id="contact" class="bg-[#071c14] text-slate-300 pt-16 pb-8 px-6 border-t-4 border-emerald-600">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12 text-left">
+        
+        <!-- Column 1: Logo & About -->
+<div>
+    <!-- Image Logo -->
+    <a href="#" class="inline-block overflow-hidden mb-4 group">
+        <img src="logo.png" alt="Jahan Traders Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+    </a>
+    
+    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+        JAHAN Traders is a trusted manufacturer and exporter of premium quality eco-friendly jute products from Bangladesh. We supply Jute Yarn, Rope, Bags, Hessian Cloth, Burlap, Geo Textile and many more products worldwide with international quality standards.
+    </p>
+    
+    <!-- Social Icons -->
+    <div class="flex items-center gap-3">
+        <a href="https://facebook.com" target="_blank" class="w-10 h-10 bg-emerald-950 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition shadow border border-emerald-900"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 bg-emerald-950 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition shadow border border-emerald-900"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://whatsapp.com" target="_blank" class="w-10 h-10 bg-emerald-950 hover:bg-emerald-600 text-white rounded-lg flex items-center justify-center transition shadow border border-emerald-900"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+            <h4 class="text-white font-bold text-lg mb-4 pb-2 border-b border-emerald-900/60">Quick Links</h4>
+            <ul class="space-y-2.5 text-sm">
+                <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Home</a></li>
+                <li><a href="#about" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> About Us</a></li>
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Products</a></li>
+                <li><a href="#gallery" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Gallery</a></li>
+                <li><a href="#contact" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Our Products -->
+        <div>
+            <h4 class="text-white font-bold text-lg mb-4 pb-2 border-b border-emerald-900/60">Our Products</h4>
+            <ul class="space-y-2.5 text-sm">
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Jute Yarn</a></li>
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Jute Rope</a></li>
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Jute Bags</a></li>
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Jute Twine</a></li>
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Hessian Cloth</a></li>
+                <li><a href="#products" class="hover:text-emerald-400 transition flex items-center gap-2"><span class="text-emerald-500">›</span> Geo Textile</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Contact Us -->
+        <div>
+            <h4 class="text-white font-bold text-lg mb-4 pb-2 border-b border-emerald-900/60">Contact Us</h4>
+            <div class="space-y-3 text-sm text-slate-300">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0 mt-1"><i class="fa-solid fa-location-dot"></i></div>
+                    <p class="leading-relaxed">3 R.K Mission Road, Lily Pond Center, Level-10, Motijheel C/A, Dhaka-1203, Bangladesh</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                    <div>
+                        <p>(+8802) 41054317</p>
+                        <p>(+8802) 41054318</p>
+                        <p>(+880) 1711523825</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-emerald-900/50 text-emerald-400 rounded-full flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="break-all">
+                        <p>info@jahan-traders.com</p>
+                        <p>zzamanjute@gmail.com</p>
+                        <p>jahantraders86@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="border-t border-emerald-900/80 pt-6 text-center text-xs text-slate-400">
+        <p>&copy; 2026 Jahan Traders. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/+880 1711 523825" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-3xl shadow-[0_10px_25px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-110 group animate-bounce">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="absolute right-full mr-3 bg-slate-900 text-white text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md pointer-events-none">
+        Chat with us
+    </span>
+</a>
+<!-- Scroll to Top Button (Yellow Theme) -->
+<div x-data="{ scrollToTop: false }" @scroll.window="scrollToTop = (window.pageYOffset > 300)">
+    <button @click="window.scrollTo({top: 0, behavior: 'smooth'})" 
+            x-show="scrollToTop"
+            x-transition.opacity
+            class="fixed bottom-24 right-6 z-50 w-12 h-12 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-full flex items-center justify-center text-xl shadow-[0_10px_25px_rgba(245,158,11,0.4)] transition-all duration-300 hover:scale-110 focus:outline-none font-bold">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+</div>
+<!-- Cursor HTML Elements -->
+<div class="custom-cursor" id="customCursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
